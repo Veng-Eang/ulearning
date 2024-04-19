@@ -1,6 +1,5 @@
-import 'package:esala/common/widgets/text_widgets.dart';
-import 'package:esala/common/widgets/widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:esala/common/widgets/widgets.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
