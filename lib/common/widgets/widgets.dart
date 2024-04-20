@@ -1,4 +1,6 @@
+import 'package:esala/common/widgets/app_shadow.dart';
 import 'package:esala/common/widgets/text_widgets.dart';
+import 'package:esala/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
 Widget appOnboardingPage({
@@ -14,7 +16,7 @@ Widget appOnboardingPage({
         child: textNomal(
           text: title,
           fontSize: 24.0,
-          color: Colors.blue,
+          color: AppColors.primaryText,
         ),
       ),
       Container(
@@ -23,8 +25,31 @@ Widget appOnboardingPage({
         child: textNomal(
           text: subTitle,
           fontSize: 16,
+          color: AppColors.primarySecondaryElementText,
         ),
-      )
+      ),
+      _nextButton(),
     ],
+  );
+}
+
+Widget _nextButton() {
+  return GestureDetector(
+    onTap: () {
+      print("don't kick me");
+    },
+    child: Container(
+      width: 325,
+      height: 50,
+      margin: const EdgeInsets.only(top: 100.0, left: 25.0, right: 25.0),
+      decoration: appBoxShadow(),
+      child: Center(
+        child: textNomal(
+          text: "Next",
+          fontSize: 16.0,
+          color: Colors.white,
+        ),
+      ),
+    ),
   );
 }
