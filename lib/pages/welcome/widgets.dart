@@ -1,6 +1,6 @@
 import 'package:esala/common/widgets/app_shadow.dart';
 import 'package:esala/common/widgets/text_widgets.dart';
-import 'package:esala/utils/app_colors.dart';
+import 'package:esala/common/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
 Widget appOnboardingPage(
@@ -53,7 +53,7 @@ Widget _nextButton(int index, PageController pageController) {
       decoration: appBoxShadow(),
       child: Center(
         child: textNomal(
-          text: "Next",
+          text: index < 3 ? "Next" : "Get Start",
           fontSize: 16.0,
           color: Colors.white,
         ),
