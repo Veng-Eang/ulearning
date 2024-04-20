@@ -3,10 +3,12 @@ import 'package:esala/common/widgets/text_widgets.dart';
 import 'package:esala/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
-Widget appOnboardingPage({
+Widget appOnboardingPage(
+  PageController pageController, {
   required String title,
   required String subTitle,
   required String imagePath,
+  required int index,
 }) {
   return Column(
     children: [
@@ -28,15 +30,21 @@ Widget appOnboardingPage({
           color: AppColors.primarySecondaryElementText,
         ),
       ),
-      _nextButton(),
+      _nextButton(index, pageController),
     ],
   );
 }
 
-Widget _nextButton() {
+Widget _nextButton(int index, PageController pageController) {
   return GestureDetector(
     onTap: () {
-      print("don't kick me");
+      if (index < 3) {
+        pageController.animateToPage(
+          index,
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.bounceIn,
+        );
+      }
     },
     child: Container(
       width: 325,
