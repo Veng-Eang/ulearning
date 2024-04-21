@@ -48,11 +48,15 @@ Widget _nextButton(
           curve: Curves.bounceIn,
         );
       } else {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) => const SignInScreen(),
-          ),
-        );
+        // Using pushnamed
+        Navigator.of(context).pushNamed('signin');
+
+        // Using push
+        // Navigator.of(context).push(
+        //   MaterialPageRoute(
+        //     builder: (context) => const SignInScreen(),
+        //   ),
+        // );
       }
     },
     child: Container(
