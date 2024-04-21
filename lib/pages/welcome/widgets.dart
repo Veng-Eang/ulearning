@@ -1,6 +1,7 @@
 import 'package:esala/common/widgets/app_shadow.dart';
 import 'package:esala/common/widgets/text_widgets.dart';
 import 'package:esala/common/utils/app_colors.dart';
+import 'package:esala/pages/sign_in/sign_in.dart';
 import 'package:flutter/material.dart';
 
 Widget appOnboardingPage(
@@ -9,6 +10,7 @@ Widget appOnboardingPage(
   required String subTitle,
   required String imagePath,
   required int index,
+  required BuildContext context,
 }) {
   return Column(
     children: [
@@ -30,12 +32,13 @@ Widget appOnboardingPage(
           color: AppColors.primarySecondaryElementText,
         ),
       ),
-      _nextButton(index, pageController),
+      _nextButton(index, pageController, context),
     ],
   );
 }
 
-Widget _nextButton(int index, PageController pageController) {
+Widget _nextButton(
+    int index, PageController pageController, BuildContext context) {
   return GestureDetector(
     onTap: () {
       if (index < 3) {
@@ -43,6 +46,12 @@ Widget _nextButton(int index, PageController pageController) {
           index,
           duration: const Duration(milliseconds: 300),
           curve: Curves.bounceIn,
+        );
+      } else {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => const SignInScreen(),
+          ),
         );
       }
     },

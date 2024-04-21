@@ -33,6 +33,7 @@ class WelcomeScreen extends ConsumerWidget {
                           "Forget about of paer all knowledge in one learning",
                       imagePath: "assets/images/reading.png",
                       index: 1,
+                      context : context,
                     ),
                     appOnboardingPage(
                       _pageController,
@@ -41,6 +42,7 @@ class WelcomeScreen extends ConsumerWidget {
                           "Always keep in touch with your tutor and friends. Let's get connected",
                       imagePath: "assets/images/man.png",
                       index: 2,
+                      context : context,
                     ),
                     appOnboardingPage(
                       _pageController,
@@ -49,6 +51,7 @@ class WelcomeScreen extends ConsumerWidget {
                           "Anywhere, anytime. The time is at your discretion. So study wherever",
                       imagePath: "assets/images/boy.png",
                       index: 3,
+                      context : context,
                     ),
                   ],
                 ),
