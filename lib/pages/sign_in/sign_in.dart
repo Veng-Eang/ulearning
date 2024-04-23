@@ -37,6 +37,11 @@ class SignInScreen extends StatelessWidget {
                   icon: "assets/icons/lock.png",
                   hintText: "Please enter your password",
                   obscureText: true),
+              SizedBox(height: 20.h),
+              Container(
+                margin: EdgeInsets.only(left: 25.w),
+                child: textUnderline(text: "Forgot password?"),
+              )
             ],
           ),
         ),
