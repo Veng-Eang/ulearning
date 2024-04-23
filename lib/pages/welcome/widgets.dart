@@ -1,7 +1,6 @@
 import 'package:esala/common/widgets/app_shadow.dart';
 import 'package:esala/common/widgets/text_widgets.dart';
 import 'package:esala/common/utils/app_colors.dart';
-import 'package:esala/pages/sign_in/sign_in.dart';
 import 'package:flutter/material.dart';
 
 Widget appOnboardingPage(
